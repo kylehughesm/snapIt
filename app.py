@@ -16,6 +16,7 @@ app.config['UPLOAD_FOLDER'] = IMG_FOLDER
 
 # Database connection details
 app.config['MYSQL_HOST'] = os.getenv('DBHOST')
+app.config['MYSQL_PORT'] = os.getenv('DBPORT')
 app.config['MYSQL_USER'] = os.getenv('DBUSER')
 app.config['MYSQL_PASSWORD'] = os.getenv('DBPASS')
 app.config['MYSQL_DB'] = os.getenv('DBNAME')
