@@ -1,0 +1,85 @@
+@charset "utf-8";
+body {
+	background-color: #0c1b33;
+	font-family: Arial, Tahoma, sans-serif;
+	color: #000000;
+	}
+
+header {
+	background-color: #000000;
+	color: #ffffff;
+	text-align: center;
+	padding: 5px;
+	width: 80%;
+	margin-left: 10%;
+	}
+
+main {
+	width: 60%;
+	background-color: #ffffff;
+	float: left;
+	padding: 5px;
+	margin-left: 10%;
+	}
+
+.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 90%;
+	}
+
+nav {
+	width: 90%;
+	}
+
+nav ul {
+	list-style: none;
+	}
+
+nav ul li {
+	float: left;
+	padding: 5px;
+	}
+
+nav ul li a:link, nav ul li a:visited {
+	display: block;
+	width: 150px;
+	margin-right: 4px;
+	color: #000000;
+	padding: 2px 4px 2px 4px;
+	background-color: #ffffff;
+	text-decoration: none;
+	border: 1px solid;
+	}
+
+nav ul li a:hover, nav button:hover {
+	color: #ffffff;
+	background-color: #0c1b33;
+	border: 1px solid #cfc6a5;
+	}
+
+.nav_right {
+	align-content: center;
+	float: right;
+	display: block;
+	width: 150px;
+	padding: 1px;
+}
+
+table {
+	width: 90%;
+	}
+
+.picture {
+	width: 250px;
+	}
+
+.cart_price {
+	text-align: right;
+	padding: 10px
+	}
+
+.remove {
+	padding: 10px;
+	}

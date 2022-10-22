@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %} Customer Update Email{% endblock %}
+
+{% block header %}
+    <h1>Update Email</h1>
+{% endblock %}
+
+{% block main %}
+<form action="{{ url_for('customer_update', customerID=customerID) }}" method="post">
+    
+    <label for="email">New Email:  </label>
+    <input type="text" name="email" placeholder="Email" id="email" required>
+    
+    <input type="submit" value="Submit">
+</form>
+{% endblock %}
