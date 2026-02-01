@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %} Shopping Cart {% endblock %}
+
+{% block header %}
+    <h1>Shopping Cart</h1>
+{% endblock %}
+
+{% block main %}
+{% set total = namespace(value = 0) %}
+<table>
+    <tr>
+        <th>Cart</th>
+        <td></td>
+    </tr>
+
+    {% for photo in session['shoppingCart'] %}
+        <tr>
+            <td class = "picture"><img src = "{{url_for('static', filename = photo[0]) }}" width = "200" height = "200"></td>
+            <td class = "cart_price">{{ photo[1] }}</td>
+            <td class = "remove"><a href = "{{ url_for('remove', filename=photo[0], price=photo[1]) }}">Remove</a></td>
+        </tr>
+        {% set total.value = total.value + photo[1] %}
+    {% endfor %}
+
+    <tr>
+        <td></td>
+        <td>Total before shipping and taxes:</td>
+        <td>{{ total.value }}</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><a href = "{{ url_for('empty') }}"">Empty Cart</a></td>
+        <td><button id="checkout_button" type="button" >Checkout</button></td>
+    </tr>
+</table>
+
+{% endblock %}

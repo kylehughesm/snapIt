@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %} View Photos {% endblock %}
+
+{% block header %}
+    <h1>View Photos</h1>
+{% endblock %}
+
+{% block main %}
+
+<table>
+    <tr>
+        <th>Photos</th>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+
+    {% for photo in images %}
+        <tr>
+            <td class = "picture"><img src = "{{url_for('static', filename = photo) }}" width = "200" height = "200"></td>
+            <td>8 x 10<br>{{ price["8 x 10"] }}<br><a href = "{{ url_for('add_to_cart', filename=photo, price=price["8 x 10"]) }}">Add to Cart</a></td>
+            <td>4 x 6<br>{{ price["4 x 6"] }}<br><a href = "{{ url_for('add_to_cart', filename=photo, price=price["4 x 6"]) }}">Add to Cart</a></td>
+        </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

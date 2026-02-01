@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %} SnapIt Photography {% endblock %}
+
+{% block header %}
+    <h1>Hello {{ employeeName }}</h1>
+{% endblock %}
+
+{% block main %}
+    <table>
+        <tr>
+            <th>Choose an Appointment to Add or Delete Photos</th>
+        </tr>
+        {% for appointment in appointments%}
+            <tr>
+                <td><a href = "{{ url_for('update_view',customerID=customerID, appointmentID=appointment.appointmentID) }}">{{ appointment.date }}</a></td>
+            </tr>
+        {% endfor %}
+    </table>
+
+
+{% endblock %}
