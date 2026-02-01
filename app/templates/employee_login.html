@@ -7,7 +7,7 @@
 {% endblock %}
 
 {% block main %}
-<form action="{{ url_for('employee_login') }}" method="post">
+<form action="{{ url_for('auth.employee_login') }}" method="post">
     <label for="username">Username:  </label>
     <input type="text" name="username" placeholder="Username" id="username" required><br>
     

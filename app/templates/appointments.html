@@ -13,7 +13,7 @@
         </tr>
         {% for appointment in appointments%}
             <tr>
-                <td><a href = "{{ url_for('update_view',customerID=customerID, appointmentID=appointment.appointmentID) }}">{{ appointment.date }}</a></td>
+                <td><a href = "{{ url_for('main.update_view',customerID=customerID, appointmentID=appointment.appointmentID) }}">{{ appointment.date }}</a></td>
             </tr>
         {% endfor %}
     </table>

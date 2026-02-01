@@ -9,14 +9,14 @@
 {% block main %}
 
     <p>Email:  {{ customer['email'] }}</p>
-    <a href = "{{ url_for('customer_update', customerID=customer['customerID']) }}">Edit Email</a>
+    <a href = "{{ url_for('main.customer_update', customerID=customer['customerID']) }}">Edit Email</a>
     <table>
         <tr>
             <th>Choose Session</th>
         </tr>
         {% for appointment in appointments %}
             <tr>
-                <td><a href = "{{ url_for('customer_appointment', appointmentID=appointment.appointmentID) }}">{{ appointment.date }}</a></td>
+                <td><a href = "{{ url_for('main.customer_appointment', appointmentID=appointment.appointmentID) }}">{{ appointment.date }}</a></td>
             </tr>
         {% endfor %}
     </table>

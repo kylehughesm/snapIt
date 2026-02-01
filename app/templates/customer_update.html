@@ -7,7 +7,7 @@
 {% endblock %}
 
 {% block main %}
-<form action="{{ url_for('customer_update', customerID=customerID) }}" method="post">
+<form action="{{ url_for('main.customer_update', customerID=customerID) }}" method="post">
     
     <label for="email">New Email:  </label>
     <input type="text" name="email" placeholder="Email" id="email" required>

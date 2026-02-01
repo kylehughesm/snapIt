@@ -19,7 +19,7 @@ class MySQLCustomerRepository(CustomerRepository):
 
     def get_customer_by_name(self, customerID):
         cursor = self.mysql.connection.cursor(MySQLdb.cursors.DictCursor)
-        cursor.execute('SELECT * FROM customer WHERE username = %s', (customerID))
+        cursor.execute('SELECT * FROM customer WHERE username = %s', (customerID,))
         return cursor.fetchone()
 
     def set_customer_email(self, email, customerID):

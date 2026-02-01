@@ -1,16 +1,7 @@
-# after cloning repo I had to run these commands, then upgrade the requirements.txt file
+This is my project from school I decided to refactor to adhere to Clean Code rules
+It may still need a litte work, but the database and the routes are now separted into their own interfaces
 
-pip install setuptools
-python -m pip install --upgrade setuptools
-python -m pip install -r requirements.txt
-
-mysqlclient/README.md at main  PyMySQL/mysqlclient  GitHub
-
-# for Manjaro
-sudo pacman -S gcc
-sudo pacman -S pkg-config
-pip install mysqlclient
 
 # To run gunicorn server; 
-gunicorn app:app
+uv run gunicorn run:app
 # CTRL + C to stop

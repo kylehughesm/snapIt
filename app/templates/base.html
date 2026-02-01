@@ -12,10 +12,10 @@
             <ul>
                 <li><a href = "/" >Home</a></li>
                 <li><a href = "/about/" >About</a></li>
-                <li><a href = "{{ url_for('customer') }}">Photos</a></li>
+                <li><a href = "{{ url_for('main.customer') }}">Photos</a></li>
             </ul>
-            <button type="button" class="nav_right" id="logout" onclick="window.location.href='{{ url_for( 'logout') }}';" >Logout</button>
-            <button type="button" class="nav_right" id="cart" onclick="window.location.href='{{ url_for( 'shopping_cart') }}';" >Cart</button>
+            <button type="button" class="nav_right" id="logout" onclick="window.location.href='{{ url_for( 'auth.logout') }}';" >Logout</button>
+            <button type="button" class="nav_right" id="cart" onclick="window.location.href='{{ url_for( 'main.shopping_cart') }}';" >Cart</button>
         </nav>
         <main>
             {% block main %}{% endblock %}

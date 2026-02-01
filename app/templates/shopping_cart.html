@@ -18,7 +18,7 @@
         <tr>
             <td class = "picture"><img src = "{{url_for('static', filename = photo[0]) }}" width = "200" height = "200"></td>
             <td class = "cart_price">{{ photo[1] }}</td>
-            <td class = "remove"><a href = "{{ url_for('remove', filename=photo[0], price=photo[1]) }}">Remove</a></td>
+            <td class = "remove"><a href = "{{ url_for('main.remove', filename=photo[0], price=photo[1]) }}">Remove</a></td>
         </tr>
         {% set total.value = total.value + photo[1] %}
     {% endfor %}
@@ -30,7 +30,7 @@
     </tr>
     <tr>
         <td></td>
-        <td><a href = "{{ url_for('empty') }}"">Empty Cart</a></td>
+        <td><a href = "{{ url_for('main.empty') }}"">Empty Cart</a></td>
         <td><button id="checkout_button" type="button" >Checkout</button></td>
     </tr>
 </table>
